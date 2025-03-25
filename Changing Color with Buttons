@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buttons</title>
+        <link rel="stylesheet" href="index.css"></link>
+    </head>
+    <body>
+
+
+        <div>
+            <p class="name">It's time to change color.</p>
+            <button class="Red">Red</button>
+            <button class="Blue">Blue</button>
+            <button class="Green">Green</button>
+        </div>
+
+        <script>
+
+            const paragraph = document.querySelector('.name');
+            const buttons = document.querySelectorAll('button');
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function(){
+                    const color = button.className;
+                    paragraph.style.color = color;
+                })
+            });
+        </script>
+    </body>
+</html>
